@@ -3,7 +3,46 @@ tarefas = []
 
 def cadastrar_tarefa():
     print("\n=== CADASTRAR NOVA TAREFA ===")
-    print("Funcionalidade de cadastro será implementada em seguida.")
+
+    while True:
+        titulo = input("Título: ").strip()
+
+        if titulo:
+            break
+
+        print("Erro: o título não pode estar vazio.")
+
+    descricao = input("Descrição: ").strip()
+
+    while True:
+        prioridade = input("Prioridade (Alta, Média ou Baixa): ").strip()
+
+        prioridades_validas = {
+            "alta": "Alta",
+            "média": "Média",
+            "media": "Média",
+            "baixa": "Baixa"
+        }
+
+        if prioridade.lower() in prioridades_validas:
+            prioridade = prioridades_validas[prioridade.lower()]
+            break
+
+        print("Erro: prioridade inválida. Digite Alta, Média ou Baixa.")
+
+    data_limite = input("Data limite: ").strip()
+
+    tarefa = {
+        "titulo": titulo,
+        "descricao": descricao,
+        "prioridade": prioridade,
+        "data_limite": data_limite,
+        "status": "Pendente"
+    }
+
+    tarefas.append(tarefa)
+
+    print("\nTarefa cadastrada com sucesso!")
 
 
 def visualizar_tarefas():
