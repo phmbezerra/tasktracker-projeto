@@ -47,7 +47,18 @@ def cadastrar_tarefa():
 
 def visualizar_tarefas():
     print("\n=== TAREFAS CADASTRADAS ===")
-    print("Funcionalidade de visualização será implementada em seguida.")
+
+    if not tarefas:
+        print("Nenhuma tarefa cadastrada no momento.")
+        return
+
+    for indice, tarefa in enumerate(tarefas, start=1):
+        print(f"\nTarefa {indice}")
+        print(f"Título: {tarefa['titulo']}")
+        print(f"Descrição: {tarefa['descricao']}")
+        print(f"Prioridade: {tarefa['prioridade']}")
+        print(f"Data limite: {tarefa['data_limite']}")
+        print(f"Status: {tarefa['status']}")
 
 
 def exibir_menu():
