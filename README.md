@@ -8,7 +8,7 @@ Aplicação de linha de comando desenvolvida em Python para cadastro e visualiza
 - Validar título obrigatório
 - Validar prioridade
 - Visualizar tarefas cadastradas
-- Exibir status da tarefa
+- Exibir o status das tarefas
 
 ## Dados de uma tarefa
 
@@ -20,7 +20,7 @@ Cada tarefa possui:
 - Data limite
 - Status
 
-## Tecnologias
+## Tecnologias utilizadas
 
 - Python 3
 - Git
@@ -36,13 +36,22 @@ tasktracker-projeto/
 └── src/
     └── main.py
 
+## Instalação
+
+1. Clone o repositório.
+2. Certifique-se de possuir o Python 3 instalado.
+3. Abra o terminal na pasta do projeto.
+
+O projeto não utiliza bibliotecas externas.
+
 ## Execução
 
-Para executar a aplicação:
+Execute:
 
 python src/main.py
 
 ## Autor
 
 Paulo Henrique de Melo Bezerra  
-Ciência da Computação — CEUB
+Ciência da Computação — CEUB  
+Campus Asa Norte — Noturno
