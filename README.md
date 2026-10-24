@@ -50,6 +50,41 @@ Execute:
 
 python src/main.py
 
+## Execução com Docker
+
+O TaskTracker também pode ser executado em um container Docker, sem a necessidade de instalar o Python diretamente na máquina.
+
+### Pré-requisitos
+
+- Docker Desktop instalado e em execução
+- Docker Compose disponível
+
+### Construir a imagem
+
+```bash
+docker build -t tasktracker .
+```
+
+### Executar com Docker
+
+```bash
+docker run -it --rm tasktracker
+```
+
+### Executar com Docker Compose (recomendado)
+
+```bash
+docker compose run --rm tasktracker
+```
+
+### Funcionamento
+
+O Dockerfile utiliza a imagem python:3.11-slim e configura a execução automática da aplicação.
+
+O Docker Compose permite a interação com o menu por meio das configurações stdin_open e tty.
+
+As tarefas ficam armazenadas temporariamente na memória durante a execução do programa.
+
 ## Autor
 
 Paulo Henrique de Melo Bezerra  
